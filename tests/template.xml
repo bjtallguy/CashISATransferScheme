@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Sample XML file created by Cliff Russell for Cash ISA Transfer Batch File MIG V1.0-->
+<!--NOTE: ALL DATA is structurally correct, but otherwise fictitious. As such,-->
+<!--POSTCODES and SORT CODES and the like will not validate against PAF or EISCD or other database-->
+<!--ALSO, account number and sort codes may not pass modulus checks.-->
+
+<Document xsi:schemaLocation="urn:iso:std:iso:20022:tech:xsd:sese.111.001.01 sese.111.SD1.V2.2%20MASTER.xsd"
+          xmlns="urn:iso:std:iso:20022:tech:xsd:sese.111.001.01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <TisaBlkTrfReqAndAccptncV01>
+        <GrpHdr>
+            <MsgId>990099-12-350-00000001</MsgId>
+            <CreDtTm>2011-12-16T09:30:47.0Z</CreDtTm>
+            <NbOfTxs>4</NbOfTxs>
+            <InitgPty>990099</InitgPty>
+        </GrpHdr>
+        <PEPOrISAOrPrtflTrfInstrSD1V02>
+            <MsgRef>
+                <Id>CC990099ABCD1234-999111A11350TA0001</Id>
+                <CreDtTm>2011-12-16T09:08:43.0Z</CreDtTm>
+                <DtTrfApplRcvdByAcqrrSD1>2011-12-16T08:31:02.0Z</DtTrfApplRcvdByAcqrrSD1>
+                <FctvDtOfTrfSD1>2011-12-16</FctvDtOfTrfSD1>
+            </MsgRef>
+            <PmryIndvInvstr>
+                <Nm>Nonymous</Nm>
+                <GvnNm>Annie</GvnNm>
+                <BirthDt>1967-08-13</BirthDt>
+                <SclSctyNb>AB123456C</SclSctyNb>
+                <IndvInvstrAdr>
+                    <AdrLine>Flat 4, 7th Floor</AdrLine>
+                    <AdrLine>Caverlite Tower</AdrLine>
+                    <AdrLine>47 Clavely Grove</AdrLine>
+                    <AdrLine>Northergoton</AdrLine>
+                    <PstCd>ZX3 0AA</PstCd>
+                    <Ctry>GB</Ctry>
+                </IndvInvstrAdr>
+            </PmryIndvInvstr>
+            <ClntAcct>
+                <Id>SC101010AC11110000</Id>
+                <Svcr>
+                    <PrtryId>
+                        <Id>999111</Id>
+                    </PrtryId>
+                </Svcr>
+            </ClntAcct>
+            <NewPlanMgr>
+                <PrtryId>
+                    <Id>990011</Id>
+                </PrtryId>
+            </NewPlanMgr>
+            <CshAcct>
+                <Id>
+                    <DmstAcct>
+                        <Id>SC119911AC89898989</Id>
+                    </DmstAcct>
+                </Id>
+            </CshAcct>
+            <PdctTrf>
+                <TrfId>CISA990099ABCD1234</TrfId>
+                <RsdlCshInd>false</RsdlCshInd>
+                <ISA>
+                    <XtndedCurYrTp>INCLUDECURRENT</XtndedCurYrTp>
+                    <CshCmpntInd>true</CshCmpntInd>
+                    <PrvsYrs>
+                        <AllPrvsYrs>ALL</AllPrvsYrs>
+                        <CshCmpntInd>true</CshCmpntInd>
+                    </PrvsYrs>
+                    <CurYrSbcptDtls>
+                        <DtOfFrstSbcpt>2000-01-01</DtOfFrstSbcpt>
+                        <TtlAmtYrToDt Ccy="GBP">20802.23</TtlAmtYrToDt>
+                    </CurYrSbcptDtls>
+                    <AqrngPdctTpSD1>CASH</AqrngPdctTpSD1>
+                </ISA>
+                <EarlyClsrWvrSD1>true</EarlyClsrWvrSD1>
+                <LatsPmtDtSD1>2012-01-31</LatsPmtDtSD1>
+            </PdctTrf>
+        </PEPOrISAOrPrtflTrfInstrSD1V02>
+        <PEPOrISAOrPrtflTrfConfSD1V02>
+            <MsgRef>
+                <Id>CC1119998B8B3D3D-990099C11350AA0001</Id>
+                <CreDtTm>2011-12-16T09:04:04.0Z</CreDtTm>
+            </MsgRef>
+            <PmryIndvInvstr>
+                <Nm>Sue</Nm>
+                <GvnNm>Denim</GvnNm>
+                <BirthDt>1950-03-31</BirthDt>
+                <SclSctyNb>FF7381092L</SclSctyNb>
+                <IndvInvstrAdr>
+                    <AdrLine>37 Crimpley Crescent</AdrLine>
+                    <AdrLine>Taunchtree</AdrLine>
+                    <PstCd>PK13 0BZ</PstCd>
+                    <Ctry>GB</Ctry>
+                </IndvInvstrAdr>
+            </PmryIndvInvstr>
+            <ClntAcct>
+                <Id>SC119911AC89898989</Id>
+                <Svcr>
+                    <PrtryId>
+                        <Id>990099</Id>
+                    </PrtryId>
+                </Svcr>
+            </ClntAcct>
+            <NewPlanMgr>
+                <PrtryId>
+                    <Id>111999</Id>
+                </PrtryId>
+            </NewPlanMgr>
+            <CshAcct>
+                <Id>
+                    <DmstAcct>
+                        <Id>SC999901AC19283746</Id>
+                    </DmstAcct>
+                </Id>
+            </CshAcct>
+            <PdctTrf>
+                <TrfConfId>TRFCONF</TrfConfId>
+                <TrfInstrRef>CISA1119998B8B3D3D</TrfInstrRef>
+                <ActlTrfDt>2000-01-01</ActlTrfDt>
+                <ActlTrfAmtSD1 Ccy="GBP">0</ActlTrfAmtSD1>
+                <ActlTrfMthdSD1>BACS</ActlTrfMthdSD1>
+                <RsdlCshInd>false</RsdlCshInd>
+                <ISA>
+                    <XtndedCurYrTp>INCLUDECURRENT</XtndedCurYrTp>
+                    <CshCmpntInd>true</CshCmpntInd>
+                    <CurYrSbcptDtls>
+                        <DtOfFrstSbcpt>1967-08-13</DtOfFrstSbcpt>
+                        <TtlAmtYrToDt Ccy="GBP">0</TtlAmtYrToDt>
+                    </CurYrSbcptDtls>
+                    <AqrngPdctTpSD1>CASH</AqrngPdctTpSD1>
+                </ISA>
+            </PdctTrf>
+        </PEPOrISAOrPrtflTrfConfSD1V02>
+        <PEPOrISAOrPrtflTrfInstrSD1V02>
+            <MsgRef>
+                <Id>CC990099ABCD1235]-990011A11350TA0001</Id>
+                <CreDtTm>2011-12-16T09:06:13.0Z</CreDtTm>
+                <DtTrfApplRcvdByAcqrrSD1>2011-12-16T08:47:55.0Z</DtTrfApplRcvdByAcqrrSD1>
+                <FctvDtOfTrfSD1>2011-12-16</FctvDtOfTrfSD1>
+            </MsgRef>
+            <PmryIndvInvstr>
+                <Nm>Meestree</Nm>
+                <GvnNm>Mannov</GvnNm>
+                <BirthDt>1972-11-28</BirthDt>
+                <SclSctyNb>AB654321C</SclSctyNb>
+                <IndvInvstrAdr>
+                    <AdrLine>27 Gravel Board Cuttings</AdrLine>
+                    <AdrLine>Greenclave Estate</AdrLine>
+                    <AdrLine>Portchristerfeld Road</AdrLine>
+                    <AdrLine>Pagination Down</AdrLine>
+                    <AdrLine>Ufton-Pufton</AdrLine>
+                    <PstCd>PS8 2ZZ</PstCd>
+                    <Ctry>GB</Ctry>
+                </IndvInvstrAdr>
+            </PmryIndvInvstr>
+            <ClntAcct>
+                <Id>RNAB88-BQ3R-7721</Id>
+                <Svcr>
+                    <PrtryId>
+                        <Id>111999</Id>
+                    </PrtryId>
+                </Svcr>
+            </ClntAcct>
+            <NmneeAcct>
+                <Id>SC119911AC00333000</Id>
+            </NmneeAcct>
+            <NewPlanMgr>
+                <PrtryId>
+                    <Id>990099</Id>
+                </PrtryId>
+            </NewPlanMgr>
+            <CshAcct>
+                <Id>
+                    <DmstAcct>
+                        <Id>SC119911AC12121283</Id>
+                    </DmstAcct>
+                </Id>
+            </CshAcct>
+            <PdctTrf>
+                <TrfId>CISA990099ABCD1235</TrfId>
+                <RsdlCshInd>false</RsdlCshInd>
+                <ISA>
+                    <XtndedCurYrTp>EXCLUDECURRENT</XtndedCurYrTp>
+                    <CshCmpntInd>true</CshCmpntInd>
+                    <PrvsYrs>
+                        <AmtFrPrvsYrsSbcpSD1V01 Ccy="GBP">5000.00</AmtFrPrvsYrsSbcpSD1V01>
+                        <CshCmpntInd>true</CshCmpntInd>
+                    </PrvsYrs>
+                    <AqrngPdctTpSD1>CASH</AqrngPdctTpSD1>
+                </ISA>
+                <EarlyClsrWvrSD1>true</EarlyClsrWvrSD1>
+                <LatsPmtDtSD1>2012-02-28</LatsPmtDtSD1>
+            </PdctTrf>
+        </PEPOrISAOrPrtflTrfInstrSD1V02>
+        <TrfInstrStsRptSD1V02>
+            <MsgId>
+                <Id>CC1119998B8B3STS-990099C11350SA0003</Id>
+                <CreDtTm>2011-12-16T09:05:43.0Z</CreDtTm>
+            </MsgId>
+            <RltdRef>
+                <Ref>NA</Ref>
+                <RefIssr>
+                    <PrtryId>
+                        <Id>111999</Id>
+                    </PrtryId>
+                </RefIssr>
+            </RltdRef>
+            <StsRpt>
+                <TrfRef>CISA1119998B8B3STS</TrfRef>
+                <Sts>
+                    <Sts>PEND</Sts>
+                    <Rsn>Pend:2012-01-11</Rsn>
+                </Sts>
+                <StsInitr>
+                    <PrtryId>
+                        <Id>990099</Id>
+                    </PrtryId>
+                </StsInitr>
+            </StsRpt>
+        </TrfInstrStsRptSD1V02>
+    </TisaBlkTrfReqAndAccptncV01>
+</Document>

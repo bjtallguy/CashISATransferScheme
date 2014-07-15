@@ -1,1 +1,2 @@
-__author__ = 'bj'
+from .main import *
+

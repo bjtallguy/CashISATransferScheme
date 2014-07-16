@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Cash ISA Transfer File.-->
+<!--As defined in SABA17620 issue 3.0.D baseline version-->
+
+<Document xsi:schemaLocation="urn:iso:std:iso:20022:tech:xsd:sese.111.001.01 sese.111.SD1.V2.2%20MASTER.xsd"
+          xmlns="urn:iso:std:iso:20022:tech:xsd:sese.111.001.01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <TisaBlkTrfReqAndAccptncV01>
+        <GrpHdr>
+            <MsgId>{{ MsgId }}</MsgId>
+            <CreDtTm>{{ CreDtTm }}</CreDtTm>
+            <NbOfTxs>{{ NbOfTxs }}</NbOfTxs>
+            <InitgPty>{{ InitgPty }}</InitgPty>
+        </GrpHdr>
+        {% for message in message_list %}
+        {{ message }}
+        {% endfor %}
+    </TisaBlkTrfReqAndAccptncV01>
+</Document>
